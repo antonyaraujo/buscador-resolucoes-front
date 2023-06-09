@@ -1,5 +1,7 @@
 // Footer.js
 
+import { Content } from "@/styles/global";
+
 const Footer = () => {
   return (
     <footer
@@ -7,10 +9,12 @@ const Footer = () => {
         backgroundColor: "#333",
         color: "#fff",
         padding: "20px",
-        marginTop: "auto",
+        marginTop: "48px",
       }}
     >
-      <p>© 2023 Your Website. All rights reserved.</p>
+      <Content>
+        <p>© 2023 Your Website. All rights reserved.</p>
+      </Content>
     </footer>
   );
 };

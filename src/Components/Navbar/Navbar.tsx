@@ -11,6 +11,7 @@ const Navbar = () => {
         color: "#fff",
         display: "flex",
         padding: "24px 24px",
+        marginBottom: "48px",
       }}
     >
       <Content>

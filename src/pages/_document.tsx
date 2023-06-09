@@ -9,10 +9,8 @@ export default function Document() {
       <Head />
       <body>
         <Navbar />
-        <Content>
-          <Main />
-          <NextScript />
-        </Content>
+        <Main />
+        <NextScript />
         <Footer />
       </body>
     </Html>
