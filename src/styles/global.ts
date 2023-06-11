@@ -1,4 +1,4 @@
-import { Flex, chakra, Input, Button, FormLabel} from '@chakra-ui/react';
+import { Flex, chakra, Input, Button, FormLabel, Radio} from '@chakra-ui/react';
 
 export const Content = chakra(Flex, {
     baseStyle: {
@@ -11,15 +11,7 @@ export const Content = chakra(Flex, {
 
 export const FormInput = chakra(Input, {
     baseStyle: {
-      w: '100%',
-      borderColor: 'Primary.02',
-      bg: 'White.02',
-      color: 'Primary.01',
-      border: '1px solid',
-      borderRadius: '8px',      
-      fontSize: '12px',
-      height: '48px',
-      alignItems: 'center'
+      variant: 'filled'
     }
   });
 
@@ -41,20 +33,19 @@ export const UploadButton = chakra(Button, {
     baseStyle: {
       w: '100%',
       maxW: '105px',
-      h: '32px',
-      bg: 'transparent',
+      h: '28px',      
       fontWeight: '600',
-      color: 'Primary.02',
+      color: '#FFFFFF',
       fontSize: '12px',
       lineHeight: '120%',
       border: '1px solid',
       borderRadius: '4px',
-      backgroundColor: 'White.02',
+      backgroundColor: '#000000',
       flexDirection: 'row',
       alignItems: 'center',
-      padding: '6px 16px',
-      marginTop: '8px',
-      marginRight: '16px',
+      padding: '3px 8px',
+      marginTop: '0px',
+      marginRight: '8px',
       gap: '4px'
     }
   });
@@ -67,13 +58,13 @@ export const UploadLabel = chakra(FormLabel, {
       fontWeight: 600,
       zIndex: 1,
       alignItems: 'center',
-      mr: '100px',
+      mr: '60px',
       my: 'auto',
       _hover: {
         cursor: 'pointer',
         button: {
-          bg: 'Primary.02',
-          color: 'White.02'
+          bg: '#FFFFFF',
+          color: '#000000'
         }
       }
     }
@@ -81,24 +72,30 @@ export const UploadLabel = chakra(FormLabel, {
 
   /** Label upload button, needs to be used with UploadButton to work */
 export const RemoveLabel = chakra(FormLabel, {
-    baseStyle: {
-      maxW: '105px',
-      textStyle: 'caption2',
-      fontWeight: 600,
-      zIndex: 1,
-      alignItems: 'center',
-      mr: '50px',
-      my: 'auto',
+  baseStyle: {
+    maxW: "105px",
+    textStyle: "caption2",
+    fontWeight: 600,
+    zIndex: 1,
+    alignItems: "center",
+    mr: "20px",
+    my: "auto",
+    button: {
+      bg: "#FF0D0D",
+      color: "#FFFFFF",
+    },
+    _hover: {
+      cursor: "pointer",
       button: {
-        bg: '#FF0D0D',
-        color: 'White.02'
+        bg: "#FFFFFF",
+        color: "#FF0D0D",
       },
-      _hover: {
-        cursor: 'pointer',
-        button: {
-          bg: 'White.02',
-          color: '#FF0D0D'
-        }
-      }
-    }
-  });
+    },
+  },
+});
+
+  const DatepickerStyles = chakra(Input, {
+    baseStyle: {
+        variant: 'filled'
+    },
+});

@@ -15,7 +15,7 @@ const Navbar = () => {
       }}
     >
       <Content>
-        <Box style={{ gap: "24px", flexDirection: "row", width: "70%" }}>
+        <Flex style={{ gap: "24px", flexDirection: "row", width: "70%" }}>
           <Link href="/search">Home</Link>
 
           <Link href="/register">Cadastrar Resolução</Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link href="/login">Login</Link>
 
           <Link href="/about">Sobre</Link>
-        </Box>
+        </Flex>
       </Content>
     </nav>
   );

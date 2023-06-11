@@ -10,10 +10,16 @@ const Footer = () => {
         color: "#fff",
         padding: "20px",
         marginTop: "48px",
+        position: "fixed",
+        bottom: "0",
+        width: "100%",
       }}
     >
       <Content>
-        <p>© 2023 Your Website. All rights reserved.</p>
+        <p>
+          © 2023 Buscador de Resoluções CONSU/CONSEPE (UEFS). Todos os direitos
+          reservados.
+        </p>
       </Content>
     </footer>
   );
