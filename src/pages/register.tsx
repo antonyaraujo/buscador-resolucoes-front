@@ -139,6 +139,7 @@ const Register = () => {
                           file === null ? "Insira o arquivo .zip" : file?.name
                         }
                         variant="filled"
+                        accept=".zip"
                         disabled
                       />
                       <InputRightElement>
@@ -154,7 +155,7 @@ const Register = () => {
                                 display="none"
                                 name="logo"
                                 id="logo"
-                                accept="zip"
+                                accept=".zip"
                                 variant="filled"
                                 onChange={handleFileChange}
                               />
