@@ -14,7 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import axios from "axios";
-import api from "../services/api_busca"; // use o caminho correto para seu arquivo api aqui.
+import api from "../services/api_busca";
 
 interface Resolucao {
   ano: string;
@@ -31,7 +31,6 @@ function Search() {
   const [resolutions, setResolutions] = useState<Resolucao[]>([]);
 
   useEffect(() => {
-    // inicializa com todos os dados do sistema
     handleSearch();
   }, []);
 
