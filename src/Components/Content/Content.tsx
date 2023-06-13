@@ -1,5 +1,0 @@
-maxWidth: '1440px',
-    width: '100%',
-    m: 'auto',
-    justifyContent: 'space-around',
-    flexDirection: { sm: 'column', md: 'row' },

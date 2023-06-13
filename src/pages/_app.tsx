@@ -1,4 +1,5 @@
 // pages/_app.js
+import { AuthProvider } from "@/contexts/AuthContext";
 import { ChakraProvider } from "@chakra-ui/react";
 
 // 1. Import the extendTheme function
@@ -19,7 +20,9 @@ export const theme = extendTheme({ colors });
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
     </ChakraProvider>
   );
 }
