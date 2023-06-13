@@ -8,7 +8,7 @@ function setUpAPIClient(ctx = undefined) {
   let cookies = parseCookies(ctx); // get all cookies
 
   const authApi = axios.create({
-    baseURL: "https://api-url", //FIXME: api url
+    baseURL: "https://api-url", //FIXME: put the right api url here
     headers: {
       Authorization: `Bearer ${cookies["resolution.uefs.token"]}`, // Set the auth token to make the requests
     },

@@ -41,6 +41,7 @@ function Search() {
 
   const handleSearch = async () => {
     try {
+      // FIXME: Put the right api url
       const response = await api.post("/suaURLaqui", {
         palavras_chave: keywords,
         data_inicio: startDate,
