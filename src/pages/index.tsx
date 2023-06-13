@@ -12,6 +12,11 @@ import {
   Thead,
   Tr,
   Text,
+  Radio,
+  RadioGroup,
+  Stack,
+  CheckboxGroup,
+  Checkbox,
 } from "@chakra-ui/react";
 import axios from "axios";
 import api from "../services/api_busca"; // use o caminho correto para seu arquivo api aqui.
@@ -51,27 +56,44 @@ function Search() {
   return (
     <Box>
       <Box maxWidth="1440px" padding="32px 32px">
-        <Text>Realize a busca de resoluções</Text>
-        <Flex flexDir="row">
-          <Input
-            placeholder="Palavras-chave"
-            width="30%"
-            value={keywords}
-            onChange={(e) => setKeywords(e.target.value)}
-          />
-          <Input
-            placeholder="Data de Início"
-            width="30%"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-          />
-          <Input
-            placeholder="Data Final"
-            width="30%"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-          />
-          <Button onClick={handleSearch}>Buscar</Button>
+        <Flex gap="15px" w="100%" align="center">
+          <Box w="100%" maxW="600px">
+            <Text>Realize a busca de resoluções</Text>
+            <Input
+              placeholder="Palavras-chave"
+              value={keywords}
+              w="100%"
+              onChange={(e) => setKeywords(e.target.value)}
+            />
+          </Box>
+          <Box w="100%" maxW="200px">
+            <Text>Data de início</Text>
+            <Input
+              placeholder="Data de Início"
+              type="date"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+            />
+          </Box>
+          <Box w="100%" maxW="200px">
+            <Text>Data final</Text>
+            <Input
+              placeholder="Data Final"
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
+          </Box>
+          <Box mt="20px">
+            <Button bg="#333" color="white" onClick={handleSearch}>
+              Buscar
+            </Button>
+          </Box>
+
+          <Flex flexDir="column" gap="5px">
+            <Checkbox value="CONSUL">CONSUL</Checkbox>
+            <Checkbox value="CONSEPE">CONSEPE</Checkbox>
+          </Flex>
         </Flex>
         <Box>
           <TableContainer mt="24px">

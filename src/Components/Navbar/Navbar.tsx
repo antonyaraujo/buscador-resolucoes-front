@@ -20,8 +20,6 @@ const Navbar = () => {
 
           <Link href="/register">Cadastrar Resolução</Link>
 
-          <Link href="/search">Buscar</Link>
-
           <Link href="/login">Login</Link>
 
           <Link href="/about">Sobre</Link>
