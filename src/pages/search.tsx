@@ -14,25 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { api as api_busca } from "../services/api_busca"; // use o caminho correto para seu arquivo api aqui.
-
-const [keywords, setKeywords] = useState("");
-const [startDate, setStartDate] = useState("");
-const [endDate, setEndDate] = useState("");
-const [resolutions, setResolutions] = useState([]);
-
-const handleSearch = async () => {
-  try {
-    const response = await api.post("/suaURLaqui", {
-      palavras_chave: keywords,
-      data_inicio: startDate,
-      data_final: endDate,
-    });
-    setResolutions(response.data);
-  } catch (error) {
-    console.error("Erro ao buscar resoluções:", error);
-  }
-};
+import api from "../services/api_busca"; // use o caminho correto para seu arquivo api aqui.
 
 interface Resolucao {
   ano: string;
@@ -46,12 +28,25 @@ function Search() {
   const [keywords, setKeywords] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [resolutions, setResolutions] = useState([]);
+  const [resolutions, setResolutions] = useState<Resolucao[]>([]);
 
   useEffect(() => {
     // inicializa com todos os dados do sistema
     handleSearch();
   }, []);
+
+  const handleSearch = async () => {
+    try {
+      const response = await api.post("/suaURLaqui", {
+        palavras_chave: keywords,
+        data_inicio: startDate,
+        data_final: endDate,
+      });
+      setResolutions(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar resoluções:", error);
+    }
+  };
 
   return (
     <Box>
